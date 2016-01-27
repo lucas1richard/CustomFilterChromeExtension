@@ -1,0 +1,26 @@
+{
+  "name": "Custom Filter",
+  "description": "Custom Filter",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["script.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["popup.js"]
+  },
+  "permissions": [
+    "activeTab",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "browser_action": {
+    "default_title": "Custom Filter"
+  },
+  "manifest_version": 2
+}
